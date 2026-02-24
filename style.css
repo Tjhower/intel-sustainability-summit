@@ -348,6 +348,80 @@ select {
   color: #475569;
 }
 
+/*Attendance Section*/
+.attendee-lists {
+  margin-top: 30px;
+}
+
+.attendee-list-card {
+  background: white;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.attendee-list-card li {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Grid layout for attendee names */
+.attendee-list-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+/* Container layout for names */
+.attendee-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Shared attendee name style */
+.attendee-name {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.attendee-name:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Team color styles */
+.water-style {
+  background: rgba(0, 113, 197, 0.1);
+  color: #0071c5;
+}
+
+.zero-style {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+.power-style {
+  background: rgba(245, 158, 11, 0.15);
+  color: #d97706;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
